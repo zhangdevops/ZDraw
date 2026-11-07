@@ -1,36 +1,43 @@
 # ZDraw
 
-基于 Electron、React、TypeScript 和 Excalidraw 的中文离线白板，Excalidraw 固定为 0.18.1。
+基于 Electron、React、TypeScript 和 Excalidraw 的中文离线白板，Excalidraw 版本为 0.18.1。
 
 第一版面向 Windows x64，所有字体和前端资源随安装包分发。
 
-## 第一版功能
 
-- 矩形、椭圆、菱形、线条、箭头、自由画笔、文字和本地图片。
-- 选择、移动、缩放、旋转、多选、组合、复制粘贴、撤销与重做（由 Excalidraw 提供）。
-- 新建、打开、保存、另存为 `.excalidraw` 图纸，图片内嵌保存；兼容打开此前保存的 `.zdraw` 图纸。
-- 编辑停止约 700 毫秒后更新本地恢复副本，启动恢复上次工作。
-- 新建、打开、关闭时提醒保存尚未保存的更改。
-- PNG / SVG 导出，中文界面与原生文件菜单。
-- 全屏时右上角显示“退出全屏”按钮，支持 Esc 退出；非全屏时 Esc 保持画布原有功能。
+## 下载与使用
 
-暂不包含多页、多文档标签、云同步、协作、AI、在线素材库和应用自动更新。图纸和导出文件暂限制为 100 MB。Excalidraw 的在线链接及嵌入网页在离线模式下不可用。
+当前版本为 **v0.1.0**，适用于 **Windows x64（64 位）**。两种版本的绘图功能相同，均无需安装 Node.js 或启动本地服务，运行后即可离线绘图。
 
-## 保存和恢复
+| 版本 | 下载 | 使用方式 |
+| --- | --- | --- |
+| 安装版 | [ZDraw-0.1.0-win-x64-setup.exe](https://github.com/zhangdevops/ZDraw/releases/download/v0.1.0/ZDraw-0.1.0-win-x64-setup.exe) | 按安装向导安装，适合日常使用 |
+| 免安装版 | [ZDraw-0.1.0-win-x64-portable.zip](https://github.com/zhangdevops/ZDraw/releases/download/v0.1.0/ZDraw-0.1.0-win-x64-portable.zip) | 完整解压后直接运行 |
 
-`Ctrl+S` 保存，`Ctrl+Shift+S` 另存为，`Ctrl+O` 打开，`Ctrl+N` 新建。图片及图形保存在同一个 `.excalidraw` 文件中，可以与 Excalidraw 交换使用。
+完整版本说明和文件校验值见 [v0.1.0 发布页面](https://github.com/zhangdevops/ZDraw/releases/tag/v0.1.0)。页面中的 `Source code (zip)` 和 `Source code (tar.gz)` 是开发源码，普通使用请选择上表中的安装包或免安装 ZIP。
 
-打开旧 `.zdraw` 文件（包括从旧恢复副本打开）后，首次保存会显示 `.excalidraw` 另存为对话框，不直接覆盖旧文件。取消保存会继续保留当前画布。
+### 安装版
 
+1. 下载并双击 `ZDraw-0.1.0-win-x64-setup.exe`。
+2. 按向导选择安装位置并完成安装。
+3. 从桌面快捷方式或开始菜单启动 **ZDraw**。
 
-## 打包
+### 免安装版
 
-当前版本 0.1.0 的输出：
+1. 下载 `ZDraw-0.1.0-win-x64-portable.zip`。
+2. 右键选择“全部解压缩”，解压到一个固定目录。
+3. 打开解压后的 `ZDraw-0.1.0-win-x64` 文件夹，双击 `ZDraw.exe`。
 
-- `release/0.1.0/ZDraw-0.1.0-win-x64-setup.exe`：安装程序。
-- `release/0.1.0/win-unpacked/`：免安装运行目录，双击其中的 `ZDraw.exe`。分享时需要压缩整个目录，不能只发送这个 EXE。
+请先完整解压再运行，不要直接在压缩包预览中启动。移动或分享时需要保留整个文件夹及其中的配套文件，不能只复制 `ZDraw.exe`。
 
-安装包目前未进行代码签名。源码支持的目标为 Windows x64。
+### 开始绘图
+
+1. 在工具栏选择图形、文字或画笔，在画布上绘制内容，也可以添加本地图片。
+2. 按 `Ctrl+S` 将图纸保存为 `.excalidraw` 文件；下次按 `Ctrl+O` 打开继续编辑。
+3. 需要分享图片时，通过界面按钮或“文件”菜单导出 PNG / SVG。
+4. 进入全屏后，可点击右上角“退出全屏”或按 `Esc` 返回。
+
+安装包目前未进行代码签名。当前版本不支持应用内自动更新，后续版本可从 [Releases 页面](https://github.com/zhangdevops/ZDraw/releases)下载。
 
 
 ## 许可证与致谢
