@@ -1,0 +1,25 @@
+node_modules/
+out/
+release/
+work/
+src/renderer/public/fonts/
+src/renderer/public/zdraw.svg
+*.log
+.tools/
+
+# 本地配置、凭据及测试产物
+.env
+.env.*
+!.env.example
+.npmrc
+*.pem
+*.key
+*.p12
+*.pfx
+coverage/
+playwright-report/
+test-results/
+logs/
+.DS_Store
+Thumbs.db
+.idea/
